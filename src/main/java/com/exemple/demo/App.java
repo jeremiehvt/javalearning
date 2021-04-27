@@ -150,7 +150,7 @@ public class App
         TestReflection.testReflection();
         
         //========= test moteur de serialization ========= 
-        String file = "/home/jeremiehvt/eclipse-workspace/demo/src/resources/file.json";
+        String file = System.getProperty("user.dir")+"/src/resources/file.json";
         try ( PrintWriter writer = new PrintWriter( file ) ) {
             //SerializationEngine.writeObject( 3, writer );
 //            SerializationEngine.writeObject( 3.1415, writer );
