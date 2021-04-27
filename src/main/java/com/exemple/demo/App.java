@@ -21,6 +21,7 @@ import com.exemple.demo.annotations.*;
  * @author jeremiehvt
  *
  */
+@TestClass(category="demo")
 public class App 
 {
 	private static Pattern datePattern = Pattern.compile("^(\\d{2}|\\d{4})-\\d{2}-\\d{2}$");
@@ -179,6 +180,7 @@ public class App
         
       //========= test annotaion =========
         TestMethodAnnotation.myAnnotation();
+        TestMethodAnnotation.testAnnotation();
       //========= Fin test annotaion =========
     }
 }

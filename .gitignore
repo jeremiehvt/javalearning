@@ -1,5 +1,6 @@
 .settings
 .project
 target/
+.demo.iml
 *.iml
 .idea/

@@ -2,6 +2,7 @@ package com.exemple.demo.annotations;
 
 import java.lang.reflect.Method;
 
+import com.exemple.demo.App;
 import com.exemple.demo.annotations.TestingAnnotation.NoExceptionExpected;
 
 public class TestMethodAnnotation {
@@ -28,7 +29,7 @@ public class TestMethodAnnotation {
             // On vérifie la présence de notre annotation
         	TestingAnnotation annotation = method.getAnnotation( TestingAnnotation.class );
             if ( annotation == null ) continue;
-            
+
             // On affiche le nom de la méthode ainsi que les attributs de l'annotation.
             System.out.printf( "%s - %s - max duration = %d\n",
                     method.getName(),
@@ -38,5 +39,21 @@ public class TestMethodAnnotation {
             );
         }
         
+    }
+
+    public static void testAnnotation() throws Exception {
+        // On récupère les méta-données de la classe Demo
+        Class<App> metadata = App.class;
+
+        // Vérification de la présence de notre annotation sur la classe.
+        if ( metadata.getDeclaredAnnotation( TestClass.class ) == null ) {
+            System.err.println( "@TestClass annotation is not present" );
+            System.exit( -1 );
+        }
+
+        TestClass annotation = metadata.getAnnotation(TestClass.class);
+
+        // On affiche le nom de la méthode ainsi que les attributs de l'annotation.
+        System.out.println( "category : "+annotation.category());
     }
 }
