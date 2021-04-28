@@ -12,6 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import com.exemple.demo.GenericBox;
 import com.exemple.demo.DemoGenerics;
+import com.exemple.demo.exceptions.TestException;
 import com.exemple.demo.reflexion.*;
 import com.exemple.serialization.*;
 import com.exemple.demo.annotations.*;
@@ -178,9 +179,13 @@ public class App
         }
         //========= Fin test moteur de serialization ========= 
         
-      //========= test annotaion =========
+        //========= test annotaion =========
         TestMethodAnnotation.myAnnotation();
         TestMethodAnnotation.testAnnotation();
-      //========= Fin test annotaion =========
+        //========= Fin test annotaion =========
+
+        //========= test exceptions =========
+        TestException.mainMethod();
+        //========= Fin test exceptions =========
     }
 }
