@@ -1,4 +1,4 @@
-package com.exemple.serialization;
+package com.exemple.demo.serialization;
 
 public class Article {
 	private int idArticle;

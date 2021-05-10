@@ -3,19 +3,17 @@ package com.exemple.demo;
 import java.io.File;
 import java.io.FileReader;
 import java.io.PrintWriter;
-import java.util.InputMismatchException;
 
 
-import java.util.Locale;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import com.exemple.demo.GenericBox;
-import com.exemple.demo.DemoGenerics;
+
 import com.exemple.demo.exceptions.TestException;
-import com.exemple.demo.reflexion.*;
-import com.exemple.serialization.*;
-import com.exemple.demo.annotations.*;
+import com.exemple.demo.reflexion.TestReflection;
+import com.exemple.demo.serialization.SerializationEngine;
+import com.exemple.demo.serialization.Article;
+import com.exemple.demo.annotations.TestClass;
+import com.exemple.demo.annotations.TestMethodAnnotation;
 
 /**
  * 
@@ -40,9 +38,8 @@ public class App
 	}
 	
 	/**
-	 * 
-	 * @param args
-	 * @throws Exception 
+	 * @param args args
+	 * @throws Exception Exception
 	 */
     public static void main( String[] args ) throws Exception
     {

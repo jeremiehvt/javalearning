@@ -1,4 +1,4 @@
-package com.exemple.serialization;
+package com.exemple.demo.serialization;
 
 import java.util.ArrayList;
 import java.util.List;

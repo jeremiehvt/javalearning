@@ -1,4 +1,4 @@
-package com.exemple.serialization;
+package com.exemple.demo.serialization;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.lang.reflect.Field;
